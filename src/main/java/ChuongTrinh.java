@@ -32,37 +32,36 @@ public class ChuongTrinh {
                     quanLyCD.xuatDanhSachCD();
                     break;
                 case 2:
-                    quanLyCD.tinhTongTriGia();
+                    quanLyCD.layCDTruocNam(2020);
                     break;
                 case 3:
-                    quanLyCD.layCDTruocNam(2020);
+                    quanLyCD.timCDCoChuaChu(tinh);
                     break;
                 case 4:
                     quanLyCD.sapXepTheoGiaGiamDan();
+                    quanLyCD.xuatDanhSachCD();
                     break;
                 case 5:
-                    System.out.print("Nhap ma so CD can xoa: ");
-                    String xoaMaSo = scanner.nextLine();
-                    quanLyCD.xoaCDTheoMaSo(xoaMaSo);
+                    System.out.println("Nhập mã số CD cần xóa:");
+                    String maXoa = scanner.nextLine();
+                    quanLyCD.xoaCDTheoMaSo(maXoa);
                     break;
                 case 6:
-                    System.out.print("Nhap ma so CD can sua gia: ");
-                    String capNhat = scanner.nextLine();
-                    System.out.print("Nhap gia ban moi: ");
+                    System.out.println("Nhập mã số CD cần sửa giá:");
+                    String maSua = scanner.nextLine();
+                    System.out.println("Nhập giá bán mới:");
                     double giaMoi = scanner.nextDouble();
-                    scanner.nextLine();  // Consume newline
-                    quanLyCD.suaGiaBanTheoMaSo(capNhat, giaMoi);
+                    quanLyCD.suaGiaBanTheoMaSo(maSua, giaMoi);
                     break;
                 case 7:
-                    double tongTriGia = quanLyCD.tinhTongTriGia();
-                    System.out.println("Tong tri gia cac CD: " + tongTriGia);
+                    System.out.println("Tổng trị giá các CD: " + qlCD.tinhTongGia());
                     break;
-                case 8:
-                    System.out.println("Thoat chuong trinh.");
+                case 0:
                     scanner.close();
+                    System.out.println("Thoát chương trình.");
                     return;
                 default:
-                    System.out.println("Lua chon khong hop le.Vui long chon lai!");
+                    System.out.println("Lựa chọn không hợp lệ.");
             }
         }
     }
