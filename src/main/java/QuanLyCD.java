@@ -49,7 +49,7 @@ public class QuanLyCD {
     // Phương thức lấy ra các CD phát hành trước năm 2020
     public void layCDTruocNam(int nam) {
         for (CD cd : danhSachCD) {
-            if (cd.getNamphathanh() < nam) {
+            if (cd.getNamphathanh() < 2020) {
                 System.out.println(cd);
             }
         }
