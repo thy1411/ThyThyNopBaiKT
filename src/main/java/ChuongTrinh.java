@@ -35,7 +35,9 @@ public class ChuongTrinh {
                     quanLyCD.layCDTruocNam(2020);
                     break;
                 case 3:
-                    quanLyCD.timCDCoChuaChu(tinh);
+                    System.out.print("Nhap chuoi can tim trong ten CD: ");
+                    String chuoi = scanner.nextLine();
+                    quanLyCD.timCDCoChuaChu(chuoi);
                     break;
                 case 4:
                     quanLyCD.sapXepTheoGiaGiamDan();
@@ -54,7 +56,7 @@ public class ChuongTrinh {
                     quanLyCD.suaGiaBanTheoMaSo(maSua, giaMoi);
                     break;
                 case 7:
-                    System.out.println("Tổng trị giá các CD: " + qlCD.tinhTongGia());
+                    System.out.println("Tổng trị giá các CD: " + quanLyCD.tinhTongTriGia());
                     break;
                 case 0:
                     scanner.close();
